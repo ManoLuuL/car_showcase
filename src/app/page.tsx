@@ -23,15 +23,15 @@ export default async function Home(props: HomeProps) {
       <Main />
 
       <div className="mt-12 padding-x padding-y max-width" id="discover">
-        <div className="home__text-container">
+        <div className="flex flex-col items-start justify-start gap-y-2.5 text-black-100">
           <h1 className="text-4xl font-extrabold">Car Catalogue</h1>
           <p>Explore out cars you might like</p>
         </div>
 
-        <div className="home__filters">
+        <div className="mt-12 w-full flex-between items-center flex-wrap gap-5">
           <SearchBar />
 
-          <div className="home__filter-container">
+          <div className="flex justify-start flex-wrap items-center gap-2">
             <Filter title="fuel" options={FUELS} />
             <Filter title="year" options={YEARS_OF_PRODUCTION} />
           </div>
@@ -39,7 +39,7 @@ export default async function Home(props: HomeProps) {
 
         {!isDataEmpty ? (
           <section>
-            <div className="home__cars-wrapper">
+            <div className="grid 2xl:grid-cols-4 xl:grid-cols-3 md:grid-cols-2 grid-cols-1 w-full gap-8 pt-14">
               {allCars?.map((car, index) => (
                 <CardCar car={car} key={index} />
               ))}
@@ -51,7 +51,7 @@ export default async function Home(props: HomeProps) {
             />
           </section>
         ) : (
-          <div className="home__error-container">
+          <div className="mt-16 flex justify-center items-center flex-col gap-2">
             <h2 className="text-black text-xl font-bold">Oops, no results</h2>
             <p>{allCars?.message}</p>
           </div>
