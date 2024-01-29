@@ -1,3 +1,5 @@
+Projeto desenvolvido com base de aprendizado no projeto do adrianhajdin(javascriptmastery) https://gist.github.com/adrianhajdin
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
